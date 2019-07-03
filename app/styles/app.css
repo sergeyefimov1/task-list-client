@@ -1,0 +1,143 @@
+.app-container {
+    display:flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: #1b1e21 solid 1pt;
+    border-radius: 25px;
+    width:300px;
+    height: 600px;
+    align-items: center;
+}
+
+.container-row {
+    display:flex;
+    flex-direction: row;
+}
+
+.container-col {
+    display:flex;
+    flex-direction: column;
+}
+
+.task-list {
+    max-height:450px;
+    overflow:auto;
+    direction: rtl;
+    align-items: center;
+}
+
+.task-row:nth-child(odd) {
+    background: rgba(255, 228, 159, 0.47)
+}
+
+.done-checkbox{
+    width:20px;
+    height:20px;
+    margin-left:10px;
+    flex:none;
+}
+
+.task-num {
+    font-weight: bold;
+    direction: rtl;
+    margin-left: 5px;
+}
+
+.del-task,.title {
+    font-weight: bold;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.task-row {
+    width:250px;
+    justify-content: flex-end;
+    padding: 10px 5px 10px 5px;
+    border-bottom: black solid 1pt;
+    direction: ltr;
+}
+
+.row-data {
+    width:80%;
+    justify-content: flex-end;
+}
+
+.task-name {
+    direction: rtl;
+    cursor: pointer;
+    border:none;
+    background-color: transparent;
+}
+
+.disabled {
+    color: #7f7f7f;
+    text-decoration: line-through;
+    pointer-events: none;
+}
+
+.divider {
+    display: flex;
+    flex: 1;
+}
+
+.add-ico {
+    width:30px;
+    height:30px;
+}
+
+.add-btn {
+    width:40px;
+    height:40px;
+    padding:0px;
+    margin-left:5px;
+}
+
+.new-task-container {
+    background-image: linear-gradient(#ecd18c, #d17f1b);
+    height:50px;
+    width:250px;
+    align-items: center;
+    box-shadow: 2px 5px #888888;
+    margin: 10px;
+}
+
+.title {
+    margin-right: 25px;
+}
+
+.smooth-corners {
+    border-radius: 7px;
+}
+
+.footer-data {
+    display: flex;
+    flex-shrink: 0;
+    width:250px;
+    justify-content: space-between;
+    direction: rtl;
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.new-task-form {
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.new-task-name {
+    width: 100%
+}

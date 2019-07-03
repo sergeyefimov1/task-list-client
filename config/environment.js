@@ -2,6 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
+    server: 'http://localhost:8000/',
     modulePrefix: 'task-list',
     environment,
     rootURL: '/',

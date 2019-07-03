@@ -1,0 +1,10 @@
+<div class="new-task-form container-row">
+  {{input value=newTask key-up=(action "onChange")}}
+  <button class="smooth-corners"
+
+    disabled={{this.disabled}}
+    onclick={{action "submit"}}>
+    הוסף
+  </button>
+</div>
+

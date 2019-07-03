@@ -1,0 +1,19 @@
+<div class="new-task-container container-row smooth-corners">
+  <button class="add-btn smooth-corners" onclick={{action "toggleNewTask"}}><img class="add-ico" alt="add-icon" src="/assets/images/sign-add-icon.png"></button>
+  <div class="divider"></div>
+  <div class="title">משימות</div>
+</div>
+<NewTask class={{if showNewTask "" "hidden"}}
+         @handleChange={{action "onNewChange"}}
+         @handleSubmit={{action "handleSubmit"}}
+         @disabled={{this.newDisabled}}/>
+<TaskList @tasks={{this.tasks}}
+          @deleteTask={{action "deleteTask"}}
+          @editToggle={{action "editToggle"}}
+          @toggleCheckbox={{action "toggleCheckbox"}}/>
+<div class="divider"></div>
+<div class="footer-data container-row">
+  <div>לסיום:<label class="bold">{{tbdTasks}}</label></div>
+  <div>הושלמו:<label class="bold">{{doneTasks}}</label></div>
+  <div>סה"כ:<label class="bold">{{totalTasks}}</label></div>
+</div>

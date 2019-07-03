@@ -1,0 +1,18 @@
+<div class="container-col task-list">
+  {{#each tasks as |task index|}}
+    <div class="container-row task-row">
+      <label class="del-task" onclick={{action "deleteTask" task.id}}>X</label>
+      <div class="divider"/>
+      <div class="row-data container-row">
+        {{#if task.isEdit}}
+          {{input value=task.name class="new-task-name"}}
+          <input type="button" class="btn-success" onclick={{action "editToggle" task.id}} value="✔">
+        {{else}}
+          <button class={{if task.is_done "task-name disabled" "task-name"}} onclick={{action "editToggle" task.id}}>{{task.name}}</button>
+        {{/if}}
+        <label class="task-num">{{inc index}}.</label>
+        <input checked={{task.is_done}} type="checkbox" class="done-checkbox" onclick={{action "toggleCheckbox" task.id}}>
+      </div>
+    </div>
+  {{/each}}
+</div>

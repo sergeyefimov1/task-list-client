@@ -1,4 +1,5 @@
 module.exports = {
+  globals: { "Ember": true },
   root: true,
   parserOptions: {
     ecmaVersion: 2018,
